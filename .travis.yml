@@ -6,7 +6,7 @@ before_install:
     - docker build -t dspandiyan/docker-react -f Dockerfile.dev .
 
 scripts:
-    - docker run dspandiyan/docker-react npm run test -- --coverage
+    - docker run dspandiyan/docker-react npm run test -- --watchAll=false
 
 deploy:
   provider: elasticbeanstalk
